@@ -1,0 +1,23 @@
+.parent {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  top: 32%;
+  left: 4%;
+}
+.menu {
+  background: linear-gradient(
+    119deg,
+    #9577f2 32.03%,
+    rgba(160, 133, 247, 0.83) 88.08%
+  );
+}
+.coke {
+  position: absolute;
+  width: 14.15rem;
+  height: 15rem;
+  top: -5rem;
+  right: -1rem;
+}

@@ -1,0 +1,13 @@
+.home {
+  background: linear-gradient(
+    184deg,
+    #5315fc 3.01%,
+    rgba(100, 74, 181, 0.84) 98.8%
+  );
+
+  width: 24.375rem;
+  height: 57.75rem;
+  border-radius: 3.125rem;
+  display: flex;
+  flex-direction: column;
+}
