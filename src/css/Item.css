@@ -5,3 +5,12 @@
     rgba(160, 133, 247, 0.83) 88.08%
   );
 }
+
+.parent {
+  position: relative;
+}
+.arrow {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}

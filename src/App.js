@@ -1,19 +1,21 @@
 import "./App.css";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Home from "./components/Home";
 import Item from "./components/Item";
 import Menu from "./components/Menu";
 import Cart from "./components/Cart";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      {/* <Home></Home> */}
-      {/* <Cart></Cart> */}
-      <Item></Item>
-      {/* <Menu></Menu> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact strict path="/home" element={<Home />}></Route>
+        <Route exact strict path="/Menu" element={<Menu />}></Route>
+        <Route exact strict path="/Item" element={<Item />}></Route>
+        <Route exact strict path="/Cart" element={<Cart />}></Route>
+        <Route exact strict path="/*" element={<Home />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 export default App;

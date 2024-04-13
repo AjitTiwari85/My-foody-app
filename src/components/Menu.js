@@ -12,8 +12,10 @@ import serch from "../images/p2-removebg-preview.png";
 import cart from "../images/c2-removebg-preview.png";
 import profile from "../images/p22-removebg-preview.png";
 import icon from "../images/icons8-add-50.png";
+import { useNavigate } from "react-router-dom";
 
 function Menu() {
+  const navigate = useNavigate();
   return (
     <div className="w-[24.275] h-[52.75rem] px-[1.96rem] py-[1.5rem]">
       <div className="flex justify-between h-[3.125rem] items-center text-[2.25rem] font-semibold">
@@ -78,7 +80,7 @@ function Menu() {
       </div>
       <div className="flex justify-between">
         <div className="w-[9.375rem] h-[10.375rem] bg-[#D9D9D9] rounded-[1.25rem] p-[1rem]">
-          <div className="h-[50%]">
+          <div className="h-[50%]" onClick={() => navigate("/item")}>
             <img src={Mutton}></img>
           </div>
           <div className="h-[50%] flex flex-col pt-[.75rem] font-semibold justify-between">
@@ -108,14 +110,14 @@ function Menu() {
         </div>
       </div>
 
-      <div className="flex justify-around mt-[4rem] items-center">
-        <div>
+      <div className="flex justify-around my-[4rem] items-center">
+        <div onClick={() => navigate("/home")}>
           <img src={home} className="h-[2.5rem] "></img>
         </div>
-        <div>
+        <div onClick={() => navigate("/menu")}>
           <img src={serch} className="h-[2.5rem] "></img>
         </div>
-        <div>
+        <div onClick={() => navigate("/cart")}>
           <img src={cart} className="h-[2.5rem] "></img>
         </div>
         <div>

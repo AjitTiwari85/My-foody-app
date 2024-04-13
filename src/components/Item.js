@@ -6,13 +6,21 @@ import add from "../images/add-removebg-preview.png";
 import ryta from "../images/ry-removebg-preview.png";
 import pner from "../images/pner-removebg-preview.png";
 import salad from "../images/salad-removebg-preview.png";
+import arrow from "../images/left-arrow.png";
+import { useNavigate } from "react-router-dom";
 
 function Item() {
+  const navigate = useNavigate();
   return (
-    <div className="w-[24.275] h-[58.2rem] item rounded-[3.125rem]">
-      <div className="h-[45%]  flex justify-center items-center">
+    <div className="w-[24.275] h-[58.2rem] item rounded-[3.125rem] parent">
+      <div className="h-[45%]  flex justify-center items-center ">
         <img src={muton} className="w-[70%]"></img>
       </div>
+
+      <div className="arrow" onClick={() => navigate("/menu")}>
+        <img src={arrow} className="h-[2rem] rounded-[1rem]"></img>
+      </div>
+
       <div className="h-[55%] bg-[white] rounded-tl-[3.125rem] p-[2rem] ">
         <div className="flex justify-between items-center">
           <div className="bg-[#5e4a9a] rounded-[1.25rem] w-[4rem] h-[1.75rem flex justify-center items-center] text-[white]">
@@ -63,8 +71,11 @@ function Item() {
           </div>
         </div>
 
-        <div className="flex justify-center my-[1rem]">
-          <button className="w-[16rem] bg-[#5F45AD] text-[white] font-semibold text-[1.75rem]">
+        <div className="flex justify-center my-[2.2rem]">
+          <button
+            onClick={() => navigate("/cart")}
+            className="w-[16rem] bg-[#5F45AD] text-[white] font-semibold text-[1.75rem] rounded-[2rem]"
+          >
             Add to Cart
           </button>
         </div>
