@@ -4,31 +4,10 @@ import google from "../images/go-removebg-preview.png";
 import dots from "../images/do-removebg-preview.png";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [phoneNumber, setPhoneNumber] = useState("");
-
-  const isValidPhoneNumber = () => {
-    // Check if phone number is valid (non-empty and contains 10 digits)
-    return phoneNumber.trim() !== "" && phoneNumber.trim().length === 10;
-  };
-
-  const handleContinue = () => {
-    if (phoneNumber === "") {
-      prompt("kkfdzf");
-      // alert("fghjkl");
-    } else {
-      // alert("rahu");
-      prompt("ra");
-    }
-    // if (isValidPhoneNumber()) {
-    //   // Proceed with your logic for Continue button action
-    //   console.log("Continue button clicked");
-    // } else {
-    //   // Provide feedback to the user that phone number is invalid
-    //   alert("Please enter a valid 10-digit phone number");
-    // }
-  };
+  const navigate = useNavigate();
   return (
     <div className="w-[26.975rem] h-[57.75rem] rounded-[3.125rem]">
       <div>
@@ -58,8 +37,7 @@ function Login() {
               }}
             ></PhoneInput>
             <button
-              onClick={handleContinue}
-              // disabled={!isValidPhoneNumber()} // Disable button if phone number is invalid
+              onClick={() => navigate("/otp")}
               className="w-[100%] bg-[#E25757] mt-[1.5rem] h-[2.5rem] text-[white] font-semibold rounded-[.5rem]"
             >
               Continue
@@ -100,37 +78,3 @@ function Login() {
 }
 
 export default Login;
-// import { StyleSheet, Text, View } from "react-native";
-// import React, { useState } from "react";
-
-// const Login = () => {
-//   const [text, setText] = useState("");
-//   return (
-//     <div>
-//       <input
-//         onChange={(e) => {
-//           setText(e.target.value);
-//           console.log("e-->>", e.target.value);
-//         }}
-//         placeholder="plase enter somthing"
-//       ></input>
-//       <button
-//         onClick={() => {
-//           if (text === "") {
-//             prompt("please neter value");
-//           } else {
-//             prompt("fjdfkldjlkj");
-//           }
-//         }}
-//       >
-//         nfdnlflsl
-//       </button>
-//       <h1>kdadl</h1>
-//       <h1>{text}</h1>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
-// const styles = StyleSheet.create({});

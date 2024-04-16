@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import OtpInput from "react-otp-input";
 import arrow from "../images/arrow1-removebg-preview.png";
+import { useNavigate } from "react-router-dom";
 
 function Otp() {
   const [otp, setOtp] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div className="w-[26.975rem] h-[57.75rem] rounded-[3.125rem] p-[2rem] flex flex-col">
@@ -38,6 +40,7 @@ function Otp() {
               renderInput={(props) => <input {...props} />}
             />
             <button
+              onClick={() => navigate("/menu")}
               type="submit"
               className="mt-[1.5rem] underline underline-offset-4 text-[#BB1D1D] font-semibold"
             >

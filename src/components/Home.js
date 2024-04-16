@@ -18,7 +18,7 @@ function Home() {
       </div>
       <div className="my-20 flex justify-center">
         <button
-          onClick={() => navigate("/menu")}
+          onClick={() => navigate("/login")}
           className="w-[14rem] h-[5rem] bg-[white] text-[#492895] font-semibold rounded-2xl text-[1.75rem] boder-[0]"
         >
           Get Started
