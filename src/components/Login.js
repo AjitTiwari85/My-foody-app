@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
+  console.log("lvjdjsvfslvl");
   return (
     <div className="w-[26.975rem] h-[57.75rem] rounded-[3.125rem]">
       <div>
